@@ -25,7 +25,7 @@ public class HighScoreText : MonoBehaviour {
 
 	void Update ()
 	{
-		// Set the displayed text to be the word "Score" followed by the score value.
+		// Set the displayed text to be the word "Score" followed by the score value. Nothing to be displayed right now.
 	}
 
 }
