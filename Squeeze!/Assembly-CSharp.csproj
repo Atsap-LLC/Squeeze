@@ -51,17 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ads.cs" />
-     <Compile Include="Assets\BallBehavior.cs" />
-     <Compile Include="Assets\Barrier1.cs" />
-     <Compile Include="Assets\CameraScale.cs" />
-     <Compile Include="Assets\GameOverText.cs" />
-     <Compile Include="Assets\HighScoreText.cs" />
-     <Compile Include="Assets\Object1Pos.cs" />
-     <Compile Include="Assets\Object2Pos.cs" />
-     <Compile Include="Assets\PlayGame.cs" />
-     <Compile Include="Assets\RestartButton.cs" />
-     <Compile Include="Assets\TextPosition.cs" />
+     <Compile Include="Assets\Scripts\Ads.cs" />
+     <Compile Include="Assets\Scripts\BallBehavior.cs" />
+     <Compile Include="Assets\Scripts\Barrier1.cs" />
+     <Compile Include="Assets\Scripts\CameraScale.cs" />
+     <Compile Include="Assets\Scripts\GameOverText.cs" />
+     <Compile Include="Assets\Scripts\HighScoreText.cs" />
+     <Compile Include="Assets\Scripts\Object1Pos.cs" />
+     <Compile Include="Assets\Scripts\Object2Pos.cs" />
+     <Compile Include="Assets\Scripts\PlayGame.cs" />
+     <Compile Include="Assets\Scripts\RestartButton.cs" />
+     <Compile Include="Assets\Scripts\TextPosition.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/antoninofebbraro/Documents/Atsap/Atsap Internal Projects/Squeeze/Squeeze/Squeeze!/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
