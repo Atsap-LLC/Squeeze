@@ -6,6 +6,7 @@ public class Ads : MonoBehaviour
 {
 	public void ShowAd()
 	{
+		Debug.Log ("AD JAWN");
 		if (Advertisement.IsReady())
 		{
 			//to continue game with score
@@ -13,6 +14,7 @@ public class Ads : MonoBehaviour
 
 			//show the advertisement
 			Advertisement.Show();
+			Debug.Log ("AD JAWN SHOWN");
 		}
 
 	}

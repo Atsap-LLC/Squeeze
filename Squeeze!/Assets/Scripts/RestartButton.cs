@@ -16,6 +16,7 @@ public class RestartButton : MonoBehaviour {
 		} else if(BallBehavior.AdClicked == true){
 			BallBehavior.OneGame = true;
 		}
+		Debug.Log ("JAWN");
 		SceneManager.LoadScene ("MainScene");
 
 	}
