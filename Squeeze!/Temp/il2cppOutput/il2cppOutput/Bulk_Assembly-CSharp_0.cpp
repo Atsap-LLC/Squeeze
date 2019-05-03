@@ -158,11 +158,9 @@ extern String_t* _stringLiteral2670640191;
 extern String_t* _stringLiteral293186241;
 extern String_t* _stringLiteral2162743385;
 extern String_t* _stringLiteral1095111575;
-extern String_t* _stringLiteral757602046;
 extern String_t* _stringLiteral1853239370;
 extern const uint32_t BallBehavior_OnCollisionEnter2D_m3201070609_MetadataUsageId;
 extern const uint32_t BallBehavior_Restart_m3304928515_MetadataUsageId;
-extern const uint32_t BallBehavior__cctor_m1025139654_MetadataUsageId;
 extern RuntimeClass* Single_t1397266774_il2cpp_TypeInfo_var;
 extern String_t* _stringLiteral424354445;
 extern const uint32_t Barrier1_Start_m460434342_MetadataUsageId;
@@ -2564,34 +2562,26 @@ extern "C"  void Ads_ShowAd_m2279198125 (Ads_t829224404 * __this, const RuntimeM
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// Debug.Log ("AD JAWN");
-		// Debug.Log ("AD JAWN");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral1390283100, /*hidden argument*/NULL);
-		// if (Advertisement.IsReady())
 		IL2CPP_RUNTIME_CLASS_INIT(Advertisement_t842671397_il2cpp_TypeInfo_var);
 		bool L_0 = Advertisement_IsReady_m2792558112(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_002c;
+			goto IL_0029;
 		}
 	}
 	{
-		// BallBehavior.AdClicked = true;
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_AdClicked_12((bool)1);
-		// Advertisement.Show();
 		IL2CPP_RUNTIME_CLASS_INIT(Advertisement_t842671397_il2cpp_TypeInfo_var);
 		Advertisement_Show_m2619871676(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Debug.Log ("AD JAWN SHOWN");
-		// Debug.Log ("AD JAWN SHOWN");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral924032198, /*hidden argument*/NULL);
 	}
 
-IL_002c:
+IL_0029:
 	{
-		// }
 		return;
 	}
 }
@@ -2607,20 +2597,7 @@ IL_002c:
 extern "C"  void BallBehavior__ctor_m3402439069 (BallBehavior_t1903392055 * __this, const RuntimeMethod* method)
 {
 	{
-		// float vol = 0.7F;
 		__this->set_vol_6((0.7f));
-		// private bool hit1 = false;
-		__this->set_hit1_7((bool)0);
-		// private bool hit2 = false;
-		__this->set_hit2_8((bool)0);
-		// private bool hit3 = false;
-		__this->set_hit3_9((bool)0);
-		// private bool ScreenTouched = false;
-		__this->set_ScreenTouched_10((bool)0);
-		// private bool ObjectHit = false;
-		__this->set_ObjectHit_14((bool)0);
-		// int HighScore = 0; //high score var
-		__this->set_HighScore_18(0);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
 	}
@@ -2638,49 +2615,40 @@ extern "C"  void BallBehavior_Start_m4149589429 (BallBehavior_t1903392055 * __th
 	int32_t V_1 = 0;
 	PolygonCollider2D_t57175488 * V_2 = NULL;
 	{
-		// source = GetComponent<AudioSource>();
-		// source = GetComponent<AudioSource>();
 		AudioSource_t3935305588 * L_0 = Component_GetComponent_TisAudioSource_t3935305588_m1977431131(__this, /*hidden argument*/Component_GetComponent_TisAudioSource_t3935305588_m1977431131_RuntimeMethod_var);
 		__this->set_source_4(L_0);
-		// if (!AdClicked && ObjectHit) {
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		bool L_1 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_AdClicked_12();
 		if (L_1)
 		{
-			goto IL_004b;
+			goto IL_0048;
 		}
 	}
 	{
 		bool L_2 = __this->get_ObjectHit_14();
 		if (!L_2)
 		{
-			goto IL_004b;
+			goto IL_0048;
 		}
 	}
 	{
-		// TextPosition.score = 0;
 		((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->set_score_2(0);
-		// ObjectHit = false;
 		__this->set_ObjectHit_14((bool)0);
-		// OneGame = false; //to show ad button again
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_OneGame_13((bool)0);
-		// print(OneGame);
 		bool L_3 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_OneGame_13();
 		bool L_4 = L_3;
 		RuntimeObject * L_5 = Box(Boolean_t97287965_il2cpp_TypeInfo_var, &L_4);
-		// print(OneGame);
 		MonoBehaviour_print_m330341231(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
-		goto IL_0075;
+		goto IL_0070;
 	}
 
-IL_004b:
+IL_0048:
 	{
-		// } else if(ObjectHit && AdClicked){ //reset bools for ads
 		bool L_6 = __this->get_ObjectHit_14();
 		if (!L_6)
 		{
-			goto IL_0075;
+			goto IL_0070;
 		}
 	}
 	{
@@ -2688,31 +2656,23 @@ IL_004b:
 		bool L_7 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_AdClicked_12();
 		if (!L_7)
 		{
-			goto IL_0075;
+			goto IL_0070;
 		}
 	}
 	{
-		// ObjectHit = false;
 		__this->set_ObjectHit_14((bool)0);
-		// AdClicked = false;
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_AdClicked_12((bool)0);
-		// OneGame = true;
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_OneGame_13((bool)1);
 	}
 
-IL_0075:
+IL_0070:
 	{
-		// AdClicked = false;
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_AdClicked_12((bool)0);
-		// ObjectHit = false;
 		__this->set_ObjectHit_14((bool)0);
-		// HighScore = PlayerPrefs.GetInt("highScore");
-		// HighScore = PlayerPrefs.GetInt("highScore");
 		int32_t L_8 = PlayerPrefs_GetInt_m3797620966(NULL /*static, unused*/, _stringLiteral167811139, /*hidden argument*/NULL);
 		__this->set_HighScore_18(L_8);
-		// Sprite [] sprites = {WhiteBall,poly,rect};
 		SpriteU5BU5D_t2581906349* L_9 = ((SpriteU5BU5D_t2581906349*)SZArrayNew(SpriteU5BU5D_t2581906349_il2cpp_TypeInfo_var, (uint32_t)3));
 		Sprite_t280657092 * L_10 = __this->get_WhiteBall_15();
 		NullCheck(L_9);
@@ -2729,18 +2689,11 @@ IL_0075:
 		ArrayElementTypeCheck (L_13, L_14);
 		(L_13)->SetAt(static_cast<il2cpp_array_size_t>(2), (Sprite_t280657092 *)L_14);
 		V_0 = L_13;
-		// rigid = GetComponent<Rigidbody2D>();
-		// rigid = GetComponent<Rigidbody2D>();
 		Rigidbody2D_t939494601 * L_15 = Component_GetComponent_TisRigidbody2D_t939494601_m1531613439(__this, /*hidden argument*/Component_GetComponent_TisRigidbody2D_t939494601_m1531613439_RuntimeMethod_var);
 		__this->set_rigid_19(L_15);
-		// int x = Random.Range(0,2);
-		// int x = Random.Range(0,2);
 		int32_t L_16 = Random_Range_m4054026115(NULL /*static, unused*/, 0, 2, /*hidden argument*/NULL);
 		V_1 = L_16;
-		// gameObject.GetComponent<SpriteRenderer> ().sprite = sprites[x];
-		// gameObject.GetComponent<SpriteRenderer> ().sprite = sprites[x];
 		GameObject_t1113636619 * L_17 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// gameObject.GetComponent<SpriteRenderer> ().sprite = sprites[x];
 		NullCheck(L_17);
 		SpriteRenderer_t3235626157 * L_18 = GameObject_GetComponent_TisSpriteRenderer_t3235626157_m1701782593(L_17, /*hidden argument*/GameObject_GetComponent_TisSpriteRenderer_t3235626157_m1701782593_RuntimeMethod_var);
 		SpriteU5BU5D_t2581906349* L_19 = V_0;
@@ -2748,46 +2701,28 @@ IL_0075:
 		NullCheck(L_19);
 		int32_t L_21 = L_20;
 		Sprite_t280657092 * L_22 = (L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
-		// gameObject.GetComponent<SpriteRenderer> ().sprite = sprites[x];
 		NullCheck(L_18);
 		SpriteRenderer_set_sprite_m1286893786(L_18, L_22, /*hidden argument*/NULL);
-		// PolygonCollider2D boxCollider = gameObject.AddComponent<PolygonCollider2D>();
-		// PolygonCollider2D boxCollider = gameObject.AddComponent<PolygonCollider2D>();
 		GameObject_t1113636619 * L_23 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// PolygonCollider2D boxCollider = gameObject.AddComponent<PolygonCollider2D>();
 		NullCheck(L_23);
 		PolygonCollider2D_t57175488 * L_24 = GameObject_AddComponent_TisPolygonCollider2D_t57175488_m1827136808(L_23, /*hidden argument*/GameObject_AddComponent_TisPolygonCollider2D_t57175488_m1827136808_RuntimeMethod_var);
 		V_2 = L_24;
-		// canTouch = true;
 		__this->set_canTouch_11((bool)1);
-		// ScreenTouched = false;
 		__this->set_ScreenTouched_10((bool)0);
-		// hit1 = false;
 		__this->set_hit1_7((bool)0);
-		// hit2 = false;
 		__this->set_hit2_8((bool)0);
-		// hit3 = false;
 		__this->set_hit3_9((bool)0);
-		// Time.timeScale = 1;
-		// Time.timeScale = 1;
 		Time_set_timeScale_m1127545364(NULL /*static, unused*/, (1.0f), /*hidden argument*/NULL);
-		// RestartBut.gameObject.SetActive(false);
 		GameObject_t1113636619 * L_25 = __this->get_RestartBut_2();
-		// RestartBut.gameObject.SetActive(false);
 		NullCheck(L_25);
 		GameObject_t1113636619 * L_26 = GameObject_get_gameObject_m3693461266(L_25, /*hidden argument*/NULL);
-		// RestartBut.gameObject.SetActive(false);
 		NullCheck(L_26);
 		GameObject_SetActive_m796801857(L_26, (bool)0, /*hidden argument*/NULL);
-		// AdBut.gameObject.SetActive (false);
 		GameObject_t1113636619 * L_27 = __this->get_AdBut_3();
-		// AdBut.gameObject.SetActive (false);
 		NullCheck(L_27);
 		GameObject_t1113636619 * L_28 = GameObject_get_gameObject_m3693461266(L_27, /*hidden argument*/NULL);
-		// AdBut.gameObject.SetActive (false);
 		NullCheck(L_28);
 		GameObject_SetActive_m796801857(L_28, (bool)0, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -2802,91 +2737,73 @@ extern "C"  void BallBehavior_Update_m610456369 (BallBehavior_t1903392055 * __th
 	}
 	int32_t V_0 = 0;
 	{
-		// for(int i = 0; i < Input.touchCount; i++)
 		V_0 = 0;
-		goto IL_004c;
+		goto IL_0047;
 	}
 
-IL_0008:
+IL_0007:
 	{
-		// if (canTouch) {
 		bool L_0 = __this->get_canTouch_11();
 		if (!L_0)
 		{
-			goto IL_0040;
+			goto IL_003c;
 		}
 	}
 	{
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
 		Transform_t3600365921 * L_1 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Transform_t3600365921 * L_2 = L_1;
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
 		NullCheck(L_2);
 		Vector3_t3722313464  L_3 = Transform_get_localScale_m129152068(L_2, /*hidden argument*/NULL);
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
 		Vector3_t3722313464  L_4;
 		memset(&L_4, 0, sizeof(L_4));
 		Vector3__ctor_m3353183577((&L_4), (0.01f), (0.01f), (0.01f), /*hidden argument*/NULL);
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
 		Vector3_t3722313464  L_5 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, L_3, L_4, /*hidden argument*/NULL);
-		// transform.localScale += new Vector3 (0.01F, 0.01F, 0.01F);
 		NullCheck(L_2);
 		Transform_set_localScale_m3053443106(L_2, L_5, /*hidden argument*/NULL);
 	}
 
-IL_0040:
+IL_003c:
 	{
-		// ScreenTouched = true;
 		__this->set_ScreenTouched_10((bool)1);
-		// for(int i = 0; i < Input.touchCount; i++)
 		int32_t L_6 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add((int32_t)L_6, (int32_t)1));
 	}
 
-IL_004c:
+IL_0047:
 	{
-		// for(int i = 0; i < Input.touchCount; i++)
 		int32_t L_7 = V_0;
-		// for(int i = 0; i < Input.touchCount; i++)
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
 		int32_t L_8 = Input_get_touchCount_m3403849067(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if ((((int32_t)L_7) < ((int32_t)L_8)))
 		{
-			goto IL_0008;
+			goto IL_0007;
 		}
 	}
 	{
-		// if(ScreenTouched && Input.touchCount == 0){
 		bool L_9 = __this->get_ScreenTouched_10();
 		if (!L_9)
 		{
-			goto IL_0085;
+			goto IL_007e;
 		}
 	}
 	{
-		// if(ScreenTouched && Input.touchCount == 0){
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
 		int32_t L_10 = Input_get_touchCount_m3403849067(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (L_10)
 		{
-			goto IL_0085;
+			goto IL_007e;
 		}
 	}
 	{
-		// rigid.gravityScale = 1;
 		Rigidbody2D_t939494601 * L_11 = __this->get_rigid_19();
-		// rigid.gravityScale = 1;
 		NullCheck(L_11);
 		Rigidbody2D_set_gravityScale_m4129954518(L_11, (1.0f), /*hidden argument*/NULL);
-		// canTouch = false;
 		__this->set_canTouch_11((bool)0);
 	}
 
-IL_0085:
+IL_007e:
 	{
-		// }
 		return;
 	}
 }
@@ -2900,328 +2817,248 @@ extern "C"  void BallBehavior_OnCollisionEnter2D_m3201070609 (BallBehavior_t1903
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (hit.transform.gameObject.name == "Object1") {
 		Collision2D_t2842956331 * L_0 = ___hit0;
-		// if (hit.transform.gameObject.name == "Object1") {
 		NullCheck(L_0);
 		Transform_t3600365921 * L_1 = Collision2D_get_transform_m2670923831(L_0, /*hidden argument*/NULL);
-		// if (hit.transform.gameObject.name == "Object1") {
 		NullCheck(L_1);
 		GameObject_t1113636619 * L_2 = Component_get_gameObject_m442555142(L_1, /*hidden argument*/NULL);
-		// if (hit.transform.gameObject.name == "Object1") {
 		NullCheck(L_2);
 		String_t* L_3 = Object_get_name_m4211327027(L_2, /*hidden argument*/NULL);
-		// if (hit.transform.gameObject.name == "Object1") {
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_4 = String_op_Equality_m920492651(NULL /*static, unused*/, L_3, _stringLiteral3149063191, /*hidden argument*/NULL);
 		if (!L_4)
 		{
-			goto IL_0029;
+			goto IL_0026;
 		}
 	}
 	{
-		// hit1 = true;
 		__this->set_hit1_7((bool)1);
 	}
 
-IL_0029:
+IL_0026:
 	{
-		// if(hit.transform.gameObject.name =="Object2"){
 		Collision2D_t2842956331 * L_5 = ___hit0;
-		// if(hit.transform.gameObject.name =="Object2"){
 		NullCheck(L_5);
 		Transform_t3600365921 * L_6 = Collision2D_get_transform_m2670923831(L_5, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name =="Object2"){
 		NullCheck(L_6);
 		GameObject_t1113636619 * L_7 = Component_get_gameObject_m442555142(L_6, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name =="Object2"){
 		NullCheck(L_7);
 		String_t* L_8 = Object_get_name_m4211327027(L_7, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name =="Object2"){
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_9 = String_op_Equality_m920492651(NULL /*static, unused*/, L_8, _stringLiteral1582979250, /*hidden argument*/NULL);
 		if (!L_9)
 		{
-			goto IL_0051;
+			goto IL_004c;
 		}
 	}
 	{
-		// hit2 = true;
 		__this->set_hit2_8((bool)1);
 	}
 
-IL_0051:
+IL_004c:
 	{
-		// if(hit.transform.gameObject.name == "Spike"){
 		Collision2D_t2842956331 * L_10 = ___hit0;
-		// if(hit.transform.gameObject.name == "Spike"){
 		NullCheck(L_10);
 		Transform_t3600365921 * L_11 = Collision2D_get_transform_m2670923831(L_10, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "Spike"){
 		NullCheck(L_11);
 		GameObject_t1113636619 * L_12 = Component_get_gameObject_m442555142(L_11, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "Spike"){
 		NullCheck(L_12);
 		String_t* L_13 = Object_get_name_m4211327027(L_12, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "Spike"){
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_14 = String_op_Equality_m920492651(NULL /*static, unused*/, L_13, _stringLiteral2786658389, /*hidden argument*/NULL);
 		if (!L_14)
 		{
-			goto IL_012e;
+			goto IL_0123;
 		}
 	}
 	{
-		// hit3 = true;
 		__this->set_hit3_9((bool)1);
-		// ObjectHit = true;//for ads to reboot score
 		__this->set_ObjectHit_14((bool)1);
-		// if(TextPosition.score > HighScore) {
 		int32_t L_15 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
 		int32_t L_16 = __this->get_HighScore_18();
 		if ((((int32_t)L_15) <= ((int32_t)L_16)))
 		{
-			goto IL_00ac;
+			goto IL_00a4;
 		}
 	}
 	{
-		// HighScore = TextPosition.score;
 		int32_t L_17 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
 		__this->set_HighScore_18(L_17);
-		// PlayerPrefs.SetInt ("highScore",HighScore);
 		int32_t L_18 = __this->get_HighScore_18();
-		// PlayerPrefs.SetInt ("highScore",HighScore);
 		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral167811139, L_18, /*hidden argument*/NULL);
 	}
 
-IL_00ac:
+IL_00a4:
 	{
-		// HighScore = PlayerPrefs.GetInt("highScore");
-		// HighScore = PlayerPrefs.GetInt("highScore");
 		int32_t L_19 = PlayerPrefs_GetInt_m3797620966(NULL /*static, unused*/, _stringLiteral167811139, /*hidden argument*/NULL);
 		__this->set_HighScore_18(L_19);
-		// HighScoreText.text2.text = "HighScore: " + HighScore;
 		Text_t1901882714 * L_20 = ((HighScoreText_t3610583808_StaticFields*)il2cpp_codegen_static_fields_for(HighScoreText_t3610583808_il2cpp_TypeInfo_var))->get_text2_3();
 		int32_t L_21 = __this->get_HighScore_18();
 		int32_t L_22 = L_21;
 		RuntimeObject * L_23 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_22);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_24 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral2687550468, L_23, /*hidden argument*/NULL);
-		// HighScoreText.text2.text = "HighScore: " + HighScore;
 		NullCheck(L_20);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_20, L_24);
-		// Destroy(gameObject);
-		// Destroy(gameObject);
 		GameObject_t1113636619 * L_25 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// Destroy(gameObject);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_Destroy_m565254235(NULL /*static, unused*/, L_25, /*hidden argument*/NULL);
-		// GameOverText.GameOvertext.text = "Game Over!";
 		Text_t1901882714 * L_26 = ((GameOverText_t2065960878_StaticFields*)il2cpp_codegen_static_fields_for(GameOverText_t2065960878_il2cpp_TypeInfo_var))->get_GameOvertext_2();
-		// GameOverText.GameOvertext.text = "Game Over!";
 		NullCheck(L_26);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_26, _stringLiteral2670640191);
-		// RestartBut.gameObject.SetActive(true);
 		GameObject_t1113636619 * L_27 = __this->get_RestartBut_2();
-		// RestartBut.gameObject.SetActive(true);
 		NullCheck(L_27);
 		GameObject_t1113636619 * L_28 = GameObject_get_gameObject_m3693461266(L_27, /*hidden argument*/NULL);
-		// RestartBut.gameObject.SetActive(true);
 		NullCheck(L_28);
 		GameObject_SetActive_m796801857(L_28, (bool)1, /*hidden argument*/NULL);
-		// if(!OneGame){ //can add other ways to show the ads here.
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		bool L_29 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_OneGame_13();
 		if (L_29)
 		{
-			goto IL_0123;
+			goto IL_0119;
 		}
 	}
 	{
-		// AdBut.gameObject.SetActive (true);
 		GameObject_t1113636619 * L_30 = __this->get_AdBut_3();
-		// AdBut.gameObject.SetActive (true);
 		NullCheck(L_30);
 		GameObject_t1113636619 * L_31 = GameObject_get_gameObject_m3693461266(L_30, /*hidden argument*/NULL);
-		// AdBut.gameObject.SetActive (true);
 		NullCheck(L_31);
 		GameObject_SetActive_m796801857(L_31, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0123:
+IL_0119:
 	{
-		// Time.timeScale = 0;
-		// Time.timeScale = 0;
 		Time_set_timeScale_m1127545364(NULL /*static, unused*/, (0.0f), /*hidden argument*/NULL);
 	}
 
-IL_012e:
+IL_0123:
 	{
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		Collision2D_t2842956331 * L_32 = ___hit0;
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_32);
 		Transform_t3600365921 * L_33 = Collision2D_get_transform_m2670923831(L_32, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_33);
 		GameObject_t1113636619 * L_34 = Component_get_gameObject_m442555142(L_33, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_34);
 		String_t* L_35 = Object_get_name_m4211327027(L_34, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_36 = String_op_Equality_m920492651(NULL /*static, unused*/, L_35, _stringLiteral293186241, /*hidden argument*/NULL);
 		if (L_36)
 		{
-			goto IL_016c;
+			goto IL_0161;
 		}
 	}
 	{
 		Collision2D_t2842956331 * L_37 = ___hit0;
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_37);
 		Transform_t3600365921 * L_38 = Collision2D_get_transform_m2670923831(L_37, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_38);
 		GameObject_t1113636619 * L_39 = Component_get_gameObject_m442555142(L_38, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		NullCheck(L_39);
 		String_t* L_40 = Object_get_name_m4211327027(L_39, /*hidden argument*/NULL);
-		// if(hit.transform.gameObject.name == "BarrierRight" || hit.transform.gameObject.name == "BarrierLeft"){
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		bool L_41 = String_op_Equality_m920492651(NULL /*static, unused*/, L_40, _stringLiteral2162743385, /*hidden argument*/NULL);
 		if (!L_41)
 		{
-			goto IL_0223;
+			goto IL_0212;
 		}
 	}
 
-IL_016c:
+IL_0161:
 	{
-		// ObjectHit = true; //for ads to rebot score
 		__this->set_ObjectHit_14((bool)1);
-		// if(TextPosition.score > HighScore) {
 		int32_t L_42 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
 		int32_t L_43 = __this->get_HighScore_18();
 		if ((((int32_t)L_42) <= ((int32_t)L_43)))
 		{
-			goto IL_01a1;
+			goto IL_0193;
 		}
 	}
 	{
-		// HighScore = TextPosition.score;
 		int32_t L_44 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
 		__this->set_HighScore_18(L_44);
-		// PlayerPrefs.SetInt ("highScore",HighScore);
 		int32_t L_45 = __this->get_HighScore_18();
-		// PlayerPrefs.SetInt ("highScore",HighScore);
 		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral167811139, L_45, /*hidden argument*/NULL);
 	}
 
-IL_01a1:
+IL_0193:
 	{
-		// HighScore = PlayerPrefs.GetInt("highScore");
-		// HighScore = PlayerPrefs.GetInt("highScore");
 		int32_t L_46 = PlayerPrefs_GetInt_m3797620966(NULL /*static, unused*/, _stringLiteral167811139, /*hidden argument*/NULL);
 		__this->set_HighScore_18(L_46);
-		// HighScoreText.text2.text = "HighScore: " + HighScore;
 		Text_t1901882714 * L_47 = ((HighScoreText_t3610583808_StaticFields*)il2cpp_codegen_static_fields_for(HighScoreText_t3610583808_il2cpp_TypeInfo_var))->get_text2_3();
 		int32_t L_48 = __this->get_HighScore_18();
 		int32_t L_49 = L_48;
 		RuntimeObject * L_50 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_49);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_51 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral2687550468, L_50, /*hidden argument*/NULL);
-		// HighScoreText.text2.text = "HighScore: " + HighScore;
 		NullCheck(L_47);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_47, L_51);
-		// Destroy(gameObject);
-		// Destroy(gameObject);
 		GameObject_t1113636619 * L_52 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
-		// Destroy(gameObject);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_Destroy_m565254235(NULL /*static, unused*/, L_52, /*hidden argument*/NULL);
-		// GameOverText.GameOvertext.text = "Game Over!";
 		Text_t1901882714 * L_53 = ((GameOverText_t2065960878_StaticFields*)il2cpp_codegen_static_fields_for(GameOverText_t2065960878_il2cpp_TypeInfo_var))->get_GameOvertext_2();
-		// GameOverText.GameOvertext.text = "Game Over!";
 		NullCheck(L_53);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_53, _stringLiteral2670640191);
-		// RestartBut.gameObject.SetActive (true);
 		GameObject_t1113636619 * L_54 = __this->get_RestartBut_2();
-		// RestartBut.gameObject.SetActive (true);
 		NullCheck(L_54);
 		GameObject_t1113636619 * L_55 = GameObject_get_gameObject_m3693461266(L_54, /*hidden argument*/NULL);
-		// RestartBut.gameObject.SetActive (true);
 		NullCheck(L_55);
 		GameObject_SetActive_m796801857(L_55, (bool)1, /*hidden argument*/NULL);
-		// if(!OneGame){
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		bool L_56 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_OneGame_13();
 		if (L_56)
 		{
-			goto IL_0218;
+			goto IL_0208;
 		}
 	}
 	{
-		// AdBut.gameObject.SetActive (true);
 		GameObject_t1113636619 * L_57 = __this->get_AdBut_3();
-		// AdBut.gameObject.SetActive (true);
 		NullCheck(L_57);
 		GameObject_t1113636619 * L_58 = GameObject_get_gameObject_m3693461266(L_57, /*hidden argument*/NULL);
-		// AdBut.gameObject.SetActive (true);
 		NullCheck(L_58);
 		GameObject_SetActive_m796801857(L_58, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0218:
+IL_0208:
 	{
-		// Time.timeScale = 0;
-		// Time.timeScale = 0;
 		Time_set_timeScale_m1127545364(NULL /*static, unused*/, (0.0f), /*hidden argument*/NULL);
 	}
 
-IL_0223:
+IL_0212:
 	{
-		// if (hit1 && hit2 && !hit3) { //good play, update score here
 		bool L_59 = __this->get_hit1_7();
 		if (!L_59)
 		{
-			goto IL_0275;
+			goto IL_0262;
 		}
 	}
 	{
 		bool L_60 = __this->get_hit2_8();
 		if (!L_60)
 		{
-			goto IL_0275;
+			goto IL_0262;
 		}
 	}
 	{
 		bool L_61 = __this->get_hit3_9();
 		if (L_61)
 		{
-			goto IL_0275;
+			goto IL_0262;
 		}
 	}
 	{
-		// print ("Collision Occured");
-		// print ("Collision Occured");
 		MonoBehaviour_print_m330341231(NULL /*static, unused*/, _stringLiteral1095111575, /*hidden argument*/NULL);
-		// GameOverText.GameOvertext.text = "";
 		Text_t1901882714 * L_62 = ((GameOverText_t2065960878_StaticFields*)il2cpp_codegen_static_fields_for(GameOverText_t2065960878_il2cpp_TypeInfo_var))->get_GameOvertext_2();
-		// GameOverText.GameOvertext.text = "";
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_63 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
 		NullCheck(L_62);
-		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_62, _stringLiteral757602046);
-		// ++TextPosition.score;
-		int32_t L_63 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
-		((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->set_score_2(((int32_t)il2cpp_codegen_add((int32_t)L_63, (int32_t)1)));
-		// SceneManager.LoadScene ("MainScene"); //restarts the level after a good point
-		// SceneManager.LoadScene ("MainScene"); //restarts the level after a good point
+		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_62, L_63);
+		int32_t L_64 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
+		((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->set_score_2(((int32_t)il2cpp_codegen_add((int32_t)L_64, (int32_t)1)));
 		SceneManager_LoadScene_m1758133949(NULL /*static, unused*/, _stringLiteral1853239370, /*hidden argument*/NULL);
 	}
 
-IL_0275:
+IL_0262:
 	{
-		// }
 		return;
 	}
 }
@@ -3235,36 +3072,19 @@ extern "C"  void BallBehavior_Restart_m3304928515 (BallBehavior_t1903392055 * __
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// ScreenTouched = false;
 		__this->set_ScreenTouched_10((bool)0);
-		// rigid.gravityScale = 0;
 		Rigidbody2D_t939494601 * L_0 = __this->get_rigid_19();
-		// rigid.gravityScale = 0;
 		NullCheck(L_0);
 		Rigidbody2D_set_gravityScale_m4129954518(L_0, (0.0f), /*hidden argument*/NULL);
-		// SceneManager.LoadScene ("MainScene"); //restarts the level after a good point
-		// SceneManager.LoadScene ("MainScene"); //restarts the level after a good point
 		SceneManager_LoadScene_m1758133949(NULL /*static, unused*/, _stringLiteral1853239370, /*hidden argument*/NULL);
-		// ScreenTouched = false;
 		__this->set_ScreenTouched_10((bool)0);
-		// }
 		return;
 	}
 }
 // System.Void BallBehavior::.cctor()
 extern "C"  void BallBehavior__cctor_m1025139654 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (BallBehavior__cctor_m1025139654_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public static bool AdClicked = false;
-		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_AdClicked_12((bool)0);
-		// public static bool OneGame = false;
-		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_OneGame_13((bool)0);
 		return;
 	}
 }
@@ -3302,85 +3122,54 @@ extern "C"  void Barrier1_Start_m460434342 (Barrier1_t2668602937 * __this, const
 	Vector3_t3722313464  V_4;
 	memset(&V_4, 0, sizeof(V_4));
 	{
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 		Camera_t4157153871 * L_0 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 		int32_t L_1 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 		int32_t L_2 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 		Vector3_t3722313464  L_3;
 		memset(&L_3, 0, sizeof(L_3));
 		Vector3__ctor_m3353183577((&L_3), (((float)((float)L_1))), (((float)((float)L_2))), (0.0f), /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
 		NullCheck(L_0);
 		Vector3_t3722313464  L_4 = Camera_ScreenToWorldPoint_m3978588570(L_0, L_3, /*hidden argument*/NULL);
 		V_1 = L_4;
-		// print ("Top number "+screen.x);
 		float L_5 = (&V_1)->get_x_1();
 		float L_6 = L_5;
 		RuntimeObject * L_7 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_6);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_8 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral424354445, L_7, /*hidden argument*/NULL);
-		// print ("Top number "+screen.x);
 		MonoBehaviour_print_m330341231(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
-		// x = Random.Range(-screen.x, -2.0F);
 		float L_9 = (&V_1)->get_x_1();
-		// x = Random.Range(-screen.x, -2.0F);
 		float L_10 = Random_Range_m2202990745(NULL /*static, unused*/, ((-L_9)), (-2.0f), /*hidden argument*/NULL);
 		V_0 = L_10;
-		// pos = new Vector3(x, 0, 1);
 		float L_11 = V_0;
-		// pos = new Vector3(x, 0, 1);
 		Vector3__ctor_m3353183577((&V_2), L_11, (0.0f), (1.0f), /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
-		// transform.parent = Camera.main.transform;
 		Transform_t3600365921 * L_12 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		Camera_t4157153871 * L_13 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		NullCheck(L_13);
 		Transform_t3600365921 * L_14 = Component_get_transform_m3162698980(L_13, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		NullCheck(L_12);
 		Transform_set_parent_m786917804(L_12, L_14, /*hidden argument*/NULL);
-		// transform.localPosition = pos;
-		// transform.localPosition = pos;
 		Transform_t3600365921 * L_15 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_16 = V_2;
-		// transform.localPosition = pos;
 		NullCheck(L_15);
 		Transform_set_localPosition_m4128471975(L_15, L_16, /*hidden argument*/NULL);
-		// float Secx = x * -1F; //to make obj 2 symmetric
 		float L_17 = V_0;
 		V_3 = ((float)il2cpp_codegen_multiply((float)L_17, (float)(-1.0f)));
-		// pos2 = new Vector3 (Secx,0,1);
 		float L_18 = V_3;
-		// pos2 = new Vector3 (Secx,0,1);
 		Vector3__ctor_m3353183577((&V_4), L_18, (0.0f), (1.0f), /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		GameObject_t1113636619 * L_19 = __this->get_obj2_2();
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_19);
 		Transform_t3600365921 * L_20 = GameObject_get_transform_m1369836730(L_19, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		Camera_t4157153871 * L_21 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_21);
 		Transform_t3600365921 * L_22 = Component_get_transform_m3162698980(L_21, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_20);
 		Transform_set_parent_m786917804(L_20, L_22, /*hidden argument*/NULL);
-		// obj2.transform.localPosition = pos2;
 		GameObject_t1113636619 * L_23 = __this->get_obj2_2();
-		// obj2.transform.localPosition = pos2;
 		NullCheck(L_23);
 		Transform_t3600365921 * L_24 = GameObject_get_transform_m1369836730(L_23, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_25 = V_4;
-		// obj2.transform.localPosition = pos2;
 		NullCheck(L_24);
 		Transform_set_localPosition_m4128471975(L_24, L_25, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3388,7 +3177,6 @@ extern "C"  void Barrier1_Start_m460434342 (Barrier1_t2668602937 * __this, const
 extern "C"  void Barrier1_Update_m139774362 (Barrier1_t2668602937 * __this, const RuntimeMethod* method)
 {
 	{
-		// }
 		return;
 	}
 }
@@ -3404,9 +3192,7 @@ extern "C"  void Barrier1_Update_m139774362 (Barrier1_t2668602937 * __this, cons
 extern "C"  void CameraScale__ctor_m365375591 (CameraScale_t1966805943 * __this, const RuntimeMethod* method)
 {
 	{
-		// public float orthographicSize = 5;
 		__this->set_orthographicSize_2((5.0f));
-		// public float aspect = 1.33333f;
 		__this->set_aspect_3((1.33333f));
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
@@ -3431,94 +3217,61 @@ extern "C"  void CameraScale_Start_m4275478065 (CameraScale_t1966805943 * __this
 	Rect_t2360479859  V_6;
 	memset(&V_6, 0, sizeof(V_6));
 	{
-		// float targetaspect = 1280.0f / 800.0f;
 		V_0 = (1.6f);
-		// float windowaspect = (float)Screen.width / (float)Screen.height;
 		int32_t L_0 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// float windowaspect = (float)Screen.width / (float)Screen.height;
 		int32_t L_1 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
 		V_1 = ((float)((float)(((float)((float)L_0)))/(float)(((float)((float)L_1)))));
-		// float scaleheight = windowaspect / targetaspect;
 		float L_2 = V_1;
 		float L_3 = V_0;
 		V_2 = ((float)((float)L_2/(float)L_3));
-		// Camera camera = GetComponent<Camera>();
-		// Camera camera = GetComponent<Camera>();
 		Camera_t4157153871 * L_4 = Component_GetComponent_TisCamera_t4157153871_m1557787507(__this, /*hidden argument*/Component_GetComponent_TisCamera_t4157153871_m1557787507_RuntimeMethod_var);
 		V_3 = L_4;
-		// if (scaleheight < 1.0f)
 		float L_5 = V_2;
 		if ((!(((float)L_5) < ((float)(1.0f)))))
 		{
-			goto IL_0076;
+			goto IL_0073;
 		}
 	}
 	{
-		// Rect rect = camera.rect;
 		Camera_t4157153871 * L_6 = V_3;
-		// Rect rect = camera.rect;
 		NullCheck(L_6);
 		Rect_t2360479859  L_7 = Camera_get_rect_m2458154151(L_6, /*hidden argument*/NULL);
 		V_4 = L_7;
-		// rect.width = 1.0f;
-		// rect.width = 1.0f;
 		Rect_set_width_m2963421158((&V_4), (1.0f), /*hidden argument*/NULL);
-		// rect.height = scaleheight;
 		float L_8 = V_2;
-		// rect.height = scaleheight;
 		Rect_set_height_m1625569324((&V_4), L_8, /*hidden argument*/NULL);
-		// rect.x = 0;
-		// rect.x = 0;
 		Rect_set_x_m2352063068((&V_4), (0.0f), /*hidden argument*/NULL);
-		// rect.y = (1.0f - scaleheight) / 2.0f;
 		float L_9 = V_2;
-		// rect.y = (1.0f - scaleheight) / 2.0f;
 		Rect_set_y_m3702432190((&V_4), ((float)((float)((float)il2cpp_codegen_subtract((float)(1.0f), (float)L_9))/(float)(2.0f))), /*hidden argument*/NULL);
-		// camera.rect = rect;
 		Camera_t4157153871 * L_10 = V_3;
 		Rect_t2360479859  L_11 = V_4;
-		// camera.rect = rect;
 		NullCheck(L_10);
 		Camera_set_rect_m521006799(L_10, L_11, /*hidden argument*/NULL);
-		goto IL_00c7;
+		goto IL_00c2;
 	}
 
-IL_0076:
+IL_0073:
 	{
-		// float scalewidth = 1.0f / scaleheight;
 		float L_12 = V_2;
 		V_5 = ((float)((float)(1.0f)/(float)L_12));
-		// Rect rect = camera.rect;
 		Camera_t4157153871 * L_13 = V_3;
-		// Rect rect = camera.rect;
 		NullCheck(L_13);
 		Rect_t2360479859  L_14 = Camera_get_rect_m2458154151(L_13, /*hidden argument*/NULL);
 		V_6 = L_14;
-		// rect.width = scalewidth;
 		float L_15 = V_5;
-		// rect.width = scalewidth;
 		Rect_set_width_m2963421158((&V_6), L_15, /*hidden argument*/NULL);
-		// rect.height = 1.0f;
-		// rect.height = 1.0f;
 		Rect_set_height_m1625569324((&V_6), (1.0f), /*hidden argument*/NULL);
-		// rect.x = (1.0f - scalewidth) / 2.0f;
 		float L_16 = V_5;
-		// rect.x = (1.0f - scalewidth) / 2.0f;
 		Rect_set_x_m2352063068((&V_6), ((float)((float)((float)il2cpp_codegen_subtract((float)(1.0f), (float)L_16))/(float)(2.0f))), /*hidden argument*/NULL);
-		// rect.y = 0;
-		// rect.y = 0;
 		Rect_set_y_m3702432190((&V_6), (0.0f), /*hidden argument*/NULL);
-		// camera.rect = rect;
 		Camera_t4157153871 * L_17 = V_3;
 		Rect_t2360479859  L_18 = V_6;
-		// camera.rect = rect;
 		NullCheck(L_17);
 		Camera_set_rect_m521006799(L_17, L_18, /*hidden argument*/NULL);
 	}
 
-IL_00c7:
+IL_00c2:
 	{
-		// }
 		return;
 	}
 }
@@ -3548,16 +3301,13 @@ extern "C"  void GameOverText_Start_m3528923841 (GameOverText_t2065960878 * __th
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// GameOvertext = GetComponent <Text> ();
-		// GameOvertext = GetComponent <Text> ();
 		Text_t1901882714 * L_0 = Component_GetComponent_TisText_t1901882714_m4196288697(__this, /*hidden argument*/Component_GetComponent_TisText_t1901882714_m4196288697_RuntimeMethod_var);
 		((GameOverText_t2065960878_StaticFields*)il2cpp_codegen_static_fields_for(GameOverText_t2065960878_il2cpp_TypeInfo_var))->set_GameOvertext_2(L_0);
-		// GameOvertext.text = "";
 		Text_t1901882714 * L_1 = ((GameOverText_t2065960878_StaticFields*)il2cpp_codegen_static_fields_for(GameOverText_t2065960878_il2cpp_TypeInfo_var))->get_GameOvertext_2();
-		// GameOvertext.text = "";
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
 		NullCheck(L_1);
-		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, _stringLiteral757602046);
-		// }
+		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_2);
 		return;
 	}
 }
@@ -3565,7 +3315,6 @@ extern "C"  void GameOverText_Start_m3528923841 (GameOverText_t2065960878 * __th
 extern "C"  void GameOverText_Update_m2096381127 (GameOverText_t2065960878 * __this, const RuntimeMethod* method)
 {
 	{
-		// }
 		return;
 	}
 }
@@ -3595,20 +3344,15 @@ extern "C"  void HighScoreText_Awake_m186895520 (HighScoreText_t3610583808 * __t
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// text2 = GetComponent <Text> ();
-		// text2 = GetComponent <Text> ();
 		Text_t1901882714 * L_0 = Component_GetComponent_TisText_t1901882714_m4196288697(__this, /*hidden argument*/Component_GetComponent_TisText_t1901882714_m4196288697_RuntimeMethod_var);
 		((HighScoreText_t3610583808_StaticFields*)il2cpp_codegen_static_fields_for(HighScoreText_t3610583808_il2cpp_TypeInfo_var))->set_text2_3(L_0);
-		// text2.text = "";
 		Text_t1901882714 * L_1 = ((HighScoreText_t3610583808_StaticFields*)il2cpp_codegen_static_fields_for(HighScoreText_t3610583808_il2cpp_TypeInfo_var))->get_text2_3();
-		// text2.text = "";
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_2 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_2();
 		NullCheck(L_1);
-		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, _stringLiteral757602046);
-		// DontDestroyOnLoad (this);
-		// DontDestroyOnLoad (this);
+		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_2);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m166252750(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3616,7 +3360,6 @@ extern "C"  void HighScoreText_Awake_m186895520 (HighScoreText_t3610583808 * __t
 extern "C"  void HighScoreText_Update_m189832216 (HighScoreText_t3610583808 * __this, const RuntimeMethod* method)
 {
 	{
-		// }
 		return;
 	}
 }
@@ -3655,88 +3398,56 @@ extern "C"  void Object1Pos_Start_m2590907257 (Object1Pos_t3689194153 * __this, 
 	Vector3_t3722313464  V_5;
 	memset(&V_5, 0, sizeof(V_5));
 	{
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)); //gets the width of the screen in demensions
 		Camera_t4157153871 * L_0 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)); //gets the width of the screen in demensions
 		int32_t L_1 = Screen_get_width_m345039817(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)); //gets the width of the screen in demensions
 		int32_t L_2 = Screen_get_height_m1623532518(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)); //gets the width of the screen in demensions
 		Vector3_t3722313464  L_3;
 		memset(&L_3, 0, sizeof(L_3));
 		Vector3__ctor_m3353183577((&L_3), (((float)((float)L_1))), (((float)((float)L_2))), (0.0f), /*hidden argument*/NULL);
-		// Vector3 screen = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0)); //gets the width of the screen in demensions
 		NullCheck(L_0);
 		Vector3_t3722313464  L_4 = Camera_ScreenToWorldPoint_m3978588570(L_0, L_3, /*hidden argument*/NULL);
 		V_1 = L_4;
-		// float Scr = screen.x - 0.80F;
 		float L_5 = (&V_1)->get_x_1();
 		V_2 = ((float)il2cpp_codegen_subtract((float)L_5, (float)(0.8f)));
-		// print ("Bottom number "+screen.x);
 		float L_6 = (&V_1)->get_x_1();
 		float L_7 = L_6;
 		RuntimeObject * L_8 = Box(Single_t1397266774_il2cpp_TypeInfo_var, &L_7);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_9 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral3703909559, L_8, /*hidden argument*/NULL);
-		// print ("Bottom number "+screen.x);
 		MonoBehaviour_print_m330341231(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
-		// x = Random.Range(-Scr, -0.5F);
 		float L_10 = V_2;
-		// x = Random.Range(-Scr, -0.5F);
 		float L_11 = Random_Range_m2202990745(NULL /*static, unused*/, ((-L_10)), (-0.5f), /*hidden argument*/NULL);
 		V_0 = L_11;
-		// pos = new Vector3(x, -3, 1);
 		float L_12 = V_0;
-		// pos = new Vector3(x, -3, 1);
 		Vector3__ctor_m3353183577((&V_3), L_12, (-3.0f), (1.0f), /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
-		// transform.parent = Camera.main.transform;
 		Transform_t3600365921 * L_13 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		Camera_t4157153871 * L_14 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		NullCheck(L_14);
 		Transform_t3600365921 * L_15 = Component_get_transform_m3162698980(L_14, /*hidden argument*/NULL);
-		// transform.parent = Camera.main.transform;
 		NullCheck(L_13);
 		Transform_set_parent_m786917804(L_13, L_15, /*hidden argument*/NULL);
-		// transform.localPosition = pos;
-		// transform.localPosition = pos;
 		Transform_t3600365921 * L_16 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_17 = V_3;
-		// transform.localPosition = pos;
 		NullCheck(L_16);
 		Transform_set_localPosition_m4128471975(L_16, L_17, /*hidden argument*/NULL);
-		// float Secx = x * -1F; //to make obj 2 symmetric
 		float L_18 = V_0;
 		V_4 = ((float)il2cpp_codegen_multiply((float)L_18, (float)(-1.0f)));
-		// pos2 = new Vector3 (Secx,-3,1);
 		float L_19 = V_4;
-		// pos2 = new Vector3 (Secx,-3,1);
 		Vector3__ctor_m3353183577((&V_5), L_19, (-3.0f), (1.0f), /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		GameObject_t1113636619 * L_20 = __this->get_obj2_2();
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_20);
 		Transform_t3600365921 * L_21 = GameObject_get_transform_m1369836730(L_20, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		Camera_t4157153871 * L_22 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_22);
 		Transform_t3600365921 * L_23 = Component_get_transform_m3162698980(L_22, /*hidden argument*/NULL);
-		// obj2.transform.parent = Camera.main.transform;
 		NullCheck(L_21);
 		Transform_set_parent_m786917804(L_21, L_23, /*hidden argument*/NULL);
-		// obj2.transform.localPosition = pos2;
 		GameObject_t1113636619 * L_24 = __this->get_obj2_2();
-		// obj2.transform.localPosition = pos2;
 		NullCheck(L_24);
 		Transform_t3600365921 * L_25 = GameObject_get_transform_m1369836730(L_24, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_26 = V_5;
-		// obj2.transform.localPosition = pos2;
 		NullCheck(L_25);
 		Transform_set_localPosition_m4128471975(L_25, L_26, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3744,7 +3455,6 @@ extern "C"  void Object1Pos_Start_m2590907257 (Object1Pos_t3689194153 * __this, 
 extern "C"  void Object1Pos_Update_m2296070447 (Object1Pos_t3689194153 * __this, const RuntimeMethod* method)
 {
 	{
-		// }
 		return;
 	}
 }
@@ -3771,22 +3481,14 @@ extern "C"  void Object2Pos_Start_m296589172 (Object2Pos_t2123110212 * __this, c
 	Vector3_t3722313464  V_1;
 	memset(&V_1, 0, sizeof(V_1));
 	{
-		// x = Random.Range(1.20F, 3.15F);
-		// x = Random.Range(1.20F, 3.15F);
 		float L_0 = Random_Range_m2202990745(NULL /*static, unused*/, (1.2f), (3.15f), /*hidden argument*/NULL);
 		V_0 = L_0;
-		// pos = new Vector3(x, 0, 0);
 		float L_1 = V_0;
-		// pos = new Vector3(x, 0, 0);
 		Vector3__ctor_m3353183577((&V_1), L_1, (0.0f), (0.0f), /*hidden argument*/NULL);
-		// transform.position = pos;
-		// transform.position = pos;
 		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
 		Vector3_t3722313464  L_3 = V_1;
-		// transform.position = pos;
 		NullCheck(L_2);
 		Transform_set_position_m3387557959(L_2, L_3, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3794,7 +3496,6 @@ extern "C"  void Object2Pos_Start_m296589172 (Object2Pos_t2123110212 * __this, c
 extern "C"  void Object2Pos_Update_m4256313706 (Object2Pos_t2123110212 * __this, const RuntimeMethod* method)
 {
 	{
-		// }
 		return;
 	}
 }
@@ -3824,10 +3525,7 @@ extern "C"  void PlayGame_Play_m2260106954 (PlayGame_t3235808137 * __this, const
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// SceneManager.LoadScene ("MainScene");
-		// SceneManager.LoadScene ("MainScene");
 		SceneManager_LoadScene_m1758133949(NULL /*static, unused*/, _stringLiteral1853239370, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3857,49 +3555,39 @@ extern "C"  void RestartButton_Clicked_m840378814 (RestartButton_t2817159561 * _
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if (BallBehavior.AdClicked == false) {
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		bool L_0 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_AdClicked_12();
 		if (L_0)
 		{
-			goto IL_001e;
+			goto IL_001b;
 		}
 	}
 	{
-		// TextPosition.score = 0;
 		((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->set_score_2(0);
-		// BallBehavior.OneGame = false;
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_OneGame_13((bool)0);
-		goto IL_0030;
+		goto IL_002b;
 	}
 
-IL_001e:
+IL_001b:
 	{
-		// } else if(BallBehavior.AdClicked == true){
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		bool L_1 = ((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->get_AdClicked_12();
 		if (!L_1)
 		{
-			goto IL_0030;
+			goto IL_002b;
 		}
 	}
 	{
-		// BallBehavior.OneGame = true;
 		IL2CPP_RUNTIME_CLASS_INIT(BallBehavior_t1903392055_il2cpp_TypeInfo_var);
 		((BallBehavior_t1903392055_StaticFields*)il2cpp_codegen_static_fields_for(BallBehavior_t1903392055_il2cpp_TypeInfo_var))->set_OneGame_13((bool)1);
 	}
 
-IL_0030:
+IL_002b:
 	{
-		// Debug.Log ("JAWN");
-		// Debug.Log ("JAWN");
 		IL2CPP_RUNTIME_CLASS_INIT(Debug_t3317548046_il2cpp_TypeInfo_var);
 		Debug_Log_m4051431634(NULL /*static, unused*/, _stringLiteral459591069, /*hidden argument*/NULL);
-		// SceneManager.LoadScene ("MainScene");
-		// SceneManager.LoadScene ("MainScene");
 		SceneManager_LoadScene_m1758133949(NULL /*static, unused*/, _stringLiteral1853239370, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3923,12 +3611,9 @@ extern "C"  void Rules__ctor_m4027735180 (Rules_t1465699929 * __this, const Runt
 extern "C"  void Rules_Start_m3951356840 (Rules_t1465699929 * __this, const RuntimeMethod* method)
 {
 	{
-		// rules.enabled = false;
 		Text_t1901882714 * L_0 = __this->get_rules_2();
-		// rules.enabled = false;
 		NullCheck(L_0);
 		Behaviour_set_enabled_m20417929(L_0, (bool)0, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -3936,37 +3621,30 @@ extern "C"  void Rules_Start_m3951356840 (Rules_t1465699929 * __this, const Runt
 extern "C"  void Rules_Play_m2390539364 (Rules_t1465699929 * __this, const RuntimeMethod* method)
 {
 	{
-		// if (rules.enabled) {
 		Text_t1901882714 * L_0 = __this->get_rules_2();
-		// if (rules.enabled) {
 		NullCheck(L_0);
 		bool L_1 = Behaviour_get_enabled_m753527255(L_0, /*hidden argument*/NULL);
 		if (!L_1)
 		{
-			goto IL_0024;
+			goto IL_0021;
 		}
 	}
 	{
-		// rules.enabled = false;
 		Text_t1901882714 * L_2 = __this->get_rules_2();
-		// rules.enabled = false;
 		NullCheck(L_2);
 		Behaviour_set_enabled_m20417929(L_2, (bool)0, /*hidden argument*/NULL);
-		goto IL_0032;
+		goto IL_002d;
 	}
 
-IL_0024:
+IL_0021:
 	{
-		// rules.enabled = true;
 		Text_t1901882714 * L_3 = __this->get_rules_2();
-		// rules.enabled = true;
 		NullCheck(L_3);
 		Behaviour_set_enabled_m20417929(L_3, (bool)1, /*hidden argument*/NULL);
 	}
 
-IL_0032:
+IL_002d:
 	{
-		// }
 		return;
 	}
 }
@@ -3996,15 +3674,10 @@ extern "C"  void TextPosition_Awake_m1354865631 (TextPosition_t1762598019 * __th
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// text = GetComponent <Text> ();
-		// text = GetComponent <Text> ();
 		Text_t1901882714 * L_0 = Component_GetComponent_TisText_t1901882714_m4196288697(__this, /*hidden argument*/Component_GetComponent_TisText_t1901882714_m4196288697_RuntimeMethod_var);
 		((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->set_text_3(L_0);
-		// DontDestroyOnLoad (this);
-		// DontDestroyOnLoad (this);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m166252750(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
-		// }
 		return;
 	}
 }
@@ -4018,17 +3691,14 @@ extern "C"  void TextPosition_Update_m1652448898 (TextPosition_t1762598019 * __t
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// text.text = "Score: " + score;
 		Text_t1901882714 * L_0 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_text_3();
 		int32_t L_1 = ((TextPosition_t1762598019_StaticFields*)il2cpp_codegen_static_fields_for(TextPosition_t1762598019_il2cpp_TypeInfo_var))->get_score_2();
 		int32_t L_2 = L_1;
 		RuntimeObject * L_3 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_2);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
 		String_t* L_4 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral2183717477, L_3, /*hidden argument*/NULL);
-		// text.text = "Score: " + score;
 		NullCheck(L_0);
 		VirtActionInvoker1< String_t* >::Invoke(72 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_4);
-		// }
 		return;
 	}
 }
