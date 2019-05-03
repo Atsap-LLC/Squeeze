@@ -630,11 +630,16 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Collab: 1
+    ErrorHub: 0
+    Hub: 0
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: ff8b79bd-36d0-444c-9d0f-4bb80db356ca
-  projectName: Squeeze! (1)
+  cloudProjectId: 67479881-ba44-436c-9f07-ab16a07b0672
+  projectName: Squeeze!
   organizationId: atsap-llc
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
