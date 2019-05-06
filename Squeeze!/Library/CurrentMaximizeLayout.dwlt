@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 5702
+  controlID: 9864
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 5662
+  controlID: 9763
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,9 +187,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -173.98479, y: 45.19291, z: -5.1722693}
+    m_Target: {x: -103.45366, y: 145.92322, z: -2.8570101}
     speed: 2
-    m_Value: {x: -173.98479, y: 45.19291, z: -5.1722693}
+    m_Value: {x: -103.45366, y: 145.92322, z: -2.8570101}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -217,9 +217,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 671.69775
+    m_Target: 441.9392
     speed: 2
-    m_Value: 671.69775
+    m_Value: 441.9392
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -382,7 +382,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 30ccfdfffad9fdffb4dafdffe0dcfdff00ddfdffd225ffff8e26ffffb428ffffc028ffff96fbffff000000006e2a00008a2a0000aa2a0000ee3200000a3300007838000094380000403d0000483d0000663d0000703d0000
+    m_ExpandedIDs: da19fbff48d2fcff02d3fcff36d5fcff3ad5fcff30ccfdfffad9fdffb4dafdffe0dcfdff00ddfdffd225ffff8e26ffffb428ffffc028ffff96fbffff000000006e2a00008a2a0000aa2a0000ee3200000a3300007838000094380000403d0000483d0000663d0000703d000046430000644300006e430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,18 +469,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 43
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: 43
   m_LastProjectPath: /Users/antoninofebbraro/Documents/Atsap/Atsap Internal Projects/Squeeze/Squeeze/Squeeze!
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 62290000
-    m_LastClickedID: 10594
+    m_SelectedIDs: c0290000
+    m_LastClickedID: 10688
     m_ExpandedIDs: 000000006229000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 502d00009c2b000074ad000022db0000000000005e290000b23a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
