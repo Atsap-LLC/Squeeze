@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 442}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 9864
+  controlID: 10204
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -61,8 +61,8 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -109
-    m_HBaseRangeMax: 109
+    m_HBaseRangeMin: -441
+    m_HBaseRangeMax: 441
     m_VBaseRangeMin: -163.5
     m_VBaseRangeMax: 163.5
     m_HAllowExceedBaseRangeMin: 1
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 9763
+  controlID: 10124
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,7 +382,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: da19fbff48d2fcff02d3fcff36d5fcff3ad5fcff30ccfdfffad9fdffb4dafdffe0dcfdff00ddfdffd225ffff8e26ffffb428ffffc028ffff96fbffff000000006e2a00008a2a0000aa2a0000ee3200000a3300007838000094380000403d0000483d0000663d0000703d000046430000644300006e430000
+    m_ExpandedIDs: 5457faff0e58faff425afaff465afaff02a6faffda19fbff48d2fcff02d3fcff36d5fcff3ad5fcff30ccfdfffad9fdffb4dafdffe0dcfdff00ddfdffd225ffff8e26ffffb428ffffc028ffff96fbffff000000006e2a00008a2a0000aa2a0000ee3200000a3300007838000094380000403d0000483d0000663d0000703d000046430000644300006e430000724e0000ce510000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -469,18 +469,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 43
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: 43
   m_LastProjectPath: /Users/antoninofebbraro/Documents/Atsap/Atsap Internal Projects/Squeeze/Squeeze/Squeeze!
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c0290000
-    m_LastClickedID: 10688
+    m_SelectedIDs: 62290000
+    m_LastClickedID: 10594
     m_ExpandedIDs: 000000006229000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
