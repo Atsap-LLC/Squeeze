@@ -163,8 +163,8 @@ PlayerSettings:
     Android: com.atsap.squeeze
     iPhone: com.antoninofebbraro.mico
   buildNumber:
-    iPhone: 8
-  AndroidBundleVersionCode: 2
+    iPhone: 10
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
