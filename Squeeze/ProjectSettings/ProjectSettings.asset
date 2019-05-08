@@ -160,7 +160,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.atsap.squeeze
-    iOS: com.antoninofebbraro.mico
+    iPhone: com.antoninofebbraro.mico
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -178,9 +178,9 @@ PlayerSettings:
   StripUnusedMeshComponents: 0
   VertexChannelCompressionMask:
     serializedVersion: 2
-    m_Bits: 238
+    m_Bits: 4294901998
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 7.0
+  iOSTargetOSVersionString: 9.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -513,7 +513,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-  psp2PackagePassword: K66MuCV6GXi5xr84P2R391UXaLHbavJv
+  psp2PackagePassword: RXdCdG5nG5azdNMK66MuCV6GXi5xr84P
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
