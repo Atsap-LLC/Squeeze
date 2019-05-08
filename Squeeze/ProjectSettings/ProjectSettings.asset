@@ -162,7 +162,8 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.atsap.squeeze
     iPhone: com.antoninofebbraro.mico
-  buildNumber: {}
+  buildNumber:
+    iPhone: 8
   AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
